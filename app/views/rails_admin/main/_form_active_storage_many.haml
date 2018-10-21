@@ -9,4 +9,4 @@
           %i.icon-white.icon-trash
           = I18n.t('admin.actions.delete.menu').capitalize + " #{field.label.downcase}"
         = check_box_tag("#{form.object.class.name.downcase}[#{field.delete_method}][#{idx}]", false, false, style: 'display:none;')
-  = form.file_field(field.name, field.html_attributes.reverse_merge({ data: { fileupload: true }, multiple: true}))
+  = form.file_field(field.name, field.html_attributes.reverse_merge({ data: { multiple_fileupload: true }, multiple: true}))
